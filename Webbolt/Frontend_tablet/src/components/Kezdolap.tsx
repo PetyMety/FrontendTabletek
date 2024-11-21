@@ -18,6 +18,7 @@ export default function Kezdolap() {
     const [error, setError] = useState<string | null>(null);
     const [errorServer, setErrorServer] = useState<string>("");
     
+    console.log(error)
 
 
     useEffect(() => {
@@ -56,7 +57,7 @@ export default function Kezdolap() {
             <h2>Menü</h2>
             <Menu></Menu>
             
-            <h2>Tabletek listája</h2>
+            <h2>Első 3 legdrágább tablet</h2>
 
             <table>
                 <thead>
@@ -72,17 +73,85 @@ export default function Kezdolap() {
                     </tr>
                 </thead>
                 <tbody>
-                    {tablets.map((tablet) => (
-                        <tr key={tablet.Id}>
-                            <td>{tablet.Id}</td>
-                            <td>{tablet.Brand}</td>
-                            <td>{tablet.Model}</td>
-                            <td>{tablet.Price} Ft</td>
-                            <td>{tablet.RAM} GB</td>
-                            <td>{tablet.Memory} GB</td>
-                            <td>{tablet.Weight} g</td>
+                    
+                        <tr key={tablets[tablets.length-1].Id}>
+                            <td>{tablets[tablets.length-1].Id}</td>
+                            <td>{tablets[tablets.length-1].Brand}</td>
+                            <td>{tablets[tablets.length-1].Model}</td>
+                            <td>{tablets[tablets.length-1].Price} Ft</td>
+                            <td>{tablets[tablets.length-1].RAM} GB</td>
+                            <td>{tablets[tablets.length-1].Memory} GB</td>
+                            <td>{tablets[tablets.length-1].Weight} g</td>
                         </tr>
-                    ))}
+
+                        <tr key={tablets[tablets.length-2].Id}>
+                            <td>{tablets[tablets.length-2].Id}</td>
+                            <td>{tablets[tablets.length-2].Brand}</td>
+                            <td>{tablets[tablets.length-2].Model}</td>
+                            <td>{tablets[tablets.length-2].Price} Ft</td>
+                            <td>{tablets[tablets.length-2].RAM} GB</td>
+                            <td>{tablets[tablets.length-2].Memory} GB</td>
+                            <td>{tablets[tablets.length-2].Weight} g</td>
+                        </tr>
+
+                        <tr key={tablets[tablets.length-3].Id}>
+                            <td>{tablets[tablets.length-3].Id}</td>
+                            <td>{tablets[tablets.length-3].Brand}</td>
+                            <td>{tablets[tablets.length-3].Model}</td>
+                            <td>{tablets[tablets.length-3].Price} Ft</td>
+                            <td>{tablets[tablets.length-3].RAM} GB</td>
+                            <td>{tablets[tablets.length-3].Memory} GB</td>
+                            <td>{tablets[tablets.length-3].Weight} g</td>
+                        </tr>
+                </tbody>
+            </table>
+
+            <h2>Első 3 legolcsóbb tablet</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Márka</th>
+                        <th>Modell</th>
+                        <th>Ár</th>
+                        <th>RAM</th>
+                        <th>Memória</th>
+                        <th>Súly</th>
+                        <th>Akciók</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr key={tablets[0].Id}>
+                            <td>{tablets[0].Id}</td>
+                            <td>{tablets[0].Brand}</td>
+                            <td>{tablets[0].Model}</td>
+                            <td>{tablets[0].Price} Ft</td>
+                            <td>{tablets[0].RAM} GB</td>
+                            <td>{tablets[0].Memory} GB</td>
+                            <td>{tablets[0].Weight} g</td>
+                        </tr>
+
+                        <tr key={tablets[1].Id}>
+                            <td>{tablets[1].Id}</td>
+                            <td>{tablets[1].Brand}</td>
+                            <td>{tablets[1].Model}</td>
+                            <td>{tablets[1].Price} Ft</td>
+                            <td>{tablets[1].RAM} GB</td>
+                            <td>{tablets[1].Memory} GB</td>
+                            <td>{tablets[1].Weight} g</td>
+                        </tr>
+
+                        <tr key={tablets[2].Id}>
+                            <td>{tablets[2].Id}</td>
+                            <td>{tablets[2].Brand}</td>
+                            <td>{tablets[2].Model}</td>
+                            <td>{tablets[2].Price} Ft</td>
+                            <td>{tablets[2].RAM} GB</td>
+                            <td>{tablets[2].Memory} GB</td>
+                            <td>{tablets[2].Weight} g</td>
+                        </tr>
                 </tbody>
             </table>
         </>

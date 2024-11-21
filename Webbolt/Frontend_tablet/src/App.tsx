@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
   import TabletLista from './components/TabletLista';
   import TabletFelvetel from './components/TabletFelvetel';
   import TabletLapozRendezKeres from "./components/TabletLapozRendezKeres";
+import Kezdolap from "./components/Kezdolap";
 
   function App() {
 
@@ -21,6 +22,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
         {
           path: "/tabletek-keres-lapoz",
           element: <TabletLapozRendezKeres />,
+        },
+        {
+          path: "/tabletkezdolap",
+          element: <Kezdolap />,
         }
       ]);
   
