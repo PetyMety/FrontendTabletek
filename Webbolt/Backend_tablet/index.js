@@ -95,7 +95,14 @@ app.get('/tabletlapozas', async (req, res) => {
     }
 });
 
-
+app.get('/tabletkezdolap', async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT * FROM tablet order by Price');
+        res.status(200).json(rows);
+    } catch (error) {
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
 
 
 
