@@ -17,9 +17,7 @@ export default function TabletLista() {
     const [error, setError] = useState<string | null>(null);
     const [errorServer, setErrorServer] = useState<string>("");
     const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(1
-        
-    );
+    const [totalPages, setTotalPages] = useState(1);
 
     const handleDelete = async (id: number) => {
         alert("Törlendő tablet: " + id);
